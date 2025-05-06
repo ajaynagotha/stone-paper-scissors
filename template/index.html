@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stone Paper Scissors</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; }
+        button { margin: 10px; padding: 10px 20px; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h1>Stone Paper Scissors</h1>
+    <form method="get" action="/play">
+        <button type="submit" name="yourstr" value="s">Stone</button>
+        <button type="submit" name="yourstr" value="p">Paper</button>
+        <button type="submit" name="yourstr" value="sc">Scissor</button>
+    </form>
+
+    {% if result %}
+        <h2>Results:</h2>
+        <p>You Chose: {{ result["You Chose"] }}</p>
+        <p>Computer Chose: {{ result["Computer Chose"] }}</p>
+        <p><strong>{{ result["Result"] }}</strong></p>
+    {% endif %}
+</body>
+</html>
